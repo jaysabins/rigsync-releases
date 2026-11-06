@@ -7,8 +7,10 @@ toolbars, scripts, extensions, FX chains, templates, themes and more) between
 your computers. Change something on your laptop, push it, and pull it on your
 studio PC. No copying folders by hand, and no "which one is newer?" conflicts.
 
-Your setup is stored in **your own private GitHub repository**. RigSync has no
-servers and never sees your files.
+Your setup is stored in **your own private GitHub repository**, or in a
+**shared folder on your own network** (a NAS or a shared drive) if you'd rather
+nothing leaves your home or studio. RigSync has no servers and never sees your
+files.
 
 > **Early release.** RigSync is new. Before your first push or pull, make a
 > copy of your REAPER folder somewhere safe, just in case.
@@ -20,7 +22,9 @@ servers and never sees your files.
 - **Windows 10 or 11** (64-bit). A Mac version is planned.
 - **REAPER installed on each computer.** RigSync syncs REAPER's settings, not
   REAPER itself. It works with normal and portable installs.
-- **A free GitHub account.** Sign up at [github.com/signup](https://github.com/signup).
+- **A free GitHub account** (sign up at [github.com/signup](https://github.com/signup)),
+  **or** a shared folder every computer can open, like a NAS. See
+  [Use a shared folder instead of GitHub](#use-a-shared-folder-instead-of-github).
 
 ---
 
@@ -49,6 +53,9 @@ to *Options > Show REAPER resource path in explorer/finder*, and choose that
 folder.
 
 ### 2. Create your private repository
+In step 2, **GitHub** is selected. (Using a shared folder instead? See
+[below](#use-a-shared-folder-instead-of-github) and skip to step 5.)
+
 Click **Create a private repo**. GitHub opens with the name filled in. Make
 sure **Private** is selected, then click **Create repository**.
 
@@ -84,6 +91,22 @@ anything you like, then click **Save selection**.
 ### 6. Push
 Click **Push**. Your setup is now in your private repo. The first push can
 take a few minutes if you have lots of scripts.
+
+
+### Use a shared folder instead of GitHub
+If every computer can open the same folder on your network (a NAS, a shared
+drive, or a folder shared from one PC), RigSync can keep its copy there and
+nothing goes to the internet.
+
+1. In step 2 of setup, click **SHARED FOLDER**.
+2. Choose the folder, like `\\NAS\REAPER` or `Z:\RigSync`. RigSync makes a
+   `RigSync.git` folder inside it the first time.
+3. Click **Connect**. On your other computers, pick the **same** folder.
+
+Syncing needs the computers to be on that network. Away from it (say, with
+your laptop on the road) RigSync shows **Shared folder not reachable**,
+REAPER works as normal, and you push your changes when you're back. If the
+folder is shared from one PC, that PC has to be on.
 
 ---
 
